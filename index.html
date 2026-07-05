@@ -59,7 +59,19 @@
       background: radial-gradient(circle, rgba(47,107,255,.16), transparent 68%);
       filter: blur(8px); z-index: 0;
     }
-    .hero-inner { position: relative; z-index: 1; }
+    .hero-inner { position: relative; z-index: 1; display: flex; align-items: center; gap: 56px; }
+    .hero-text { flex: 1; min-width: 0; }
+    .hero-photo { flex-shrink: 0; }
+    .hero-photo img {
+      width: 300px; height: 300px; object-fit: cover; border-radius: 24px;
+      border: 1px solid var(--line); box-shadow: var(--shadow);
+      display: block;
+    }
+    @media (max-width: 860px) {
+      .hero-inner { flex-direction: column; gap: 32px; align-items: flex-start; }
+      .hero-photo { order: -1; }
+      .hero-photo img { width: 160px; height: 160px; border-radius: 20px; }
+    }
     .badge {
       display: inline-flex; align-items: center; gap: 8px;
       background: var(--brand-soft); color: var(--brand);
@@ -227,6 +239,7 @@
 
   <header>
     <div class="wrap hero-inner">
+      <div class="hero-text">
       <div class="badge"><span class="dot"></span> Cloud Infra · Kubernetes · AIOps</div>
       <h1>서비스를 떠받치는<br /><span class="grad">클라우드 인프라</span>를 설계합니다</h1>
       <p class="lead">
@@ -243,6 +256,10 @@
         <div class="stat"><div class="num">8<span>+</span></div><div class="lbl">주요 프로젝트</div></div>
         <div class="stat"><div class="num">15<span>+</span></div><div class="lbl">MSA 마이크로서비스</div></div>
         <div class="stat"><div class="num">4<span>+</span></div><div class="lbl">LLM 멀티에이전트 시스템</div></div>
+      </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/profile.jpg" alt="배민준 프로필 사진" />
       </div>
     </div>
   </header>
