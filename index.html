@@ -40,12 +40,7 @@
       backdrop-filter: saturate(180%) blur(12px);
       background: rgba(246,248,251,.82); border-bottom: 1px solid var(--line);
     }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-    .logo { font-weight: 800; font-size: 18px; letter-spacing: -.02em; display: flex; align-items: center; gap: 7px; }
-    .logo .mark {
-      width: 26px; height: 26px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center;
-      background: var(--brand); color: #fff; font-size: 14px;
-    }
+    .nav-inner { display: flex; align-items: center; justify-content: center; height: 64px; }
     .nav-links { display: flex; gap: 26px; font-size: 14px; font-weight: 500; color: var(--ink-soft); }
     .nav-links a:hover { color: var(--brand); }
     @media (max-width: 720px) { .nav-links { display: none; } }
@@ -210,7 +205,6 @@
 <body>
   <nav>
     <div class="wrap nav-inner">
-      <div class="logo"><span class="mark">☁</span> MinjunOps</div>
       <div class="nav-links">
         <a href="#home">홈</a>
         <a href="#about">소개</a>
@@ -228,7 +222,7 @@
     <div class="wrap hero-inner">
       <div class="hero-text">
         <div class="eyebrow">👋 안녕하세요, 배민준입니다</div>
-        <h1>클라우드 인프라를 설계하고<br /><span class="grad">에이전트로 서비스</span>를 만듭니다</h1>
+        <h1>클라우드 인프라를 설계하고<br />에이전트로 서비스를 만듭니다</h1>
         <p class="lead">
           Kubernetes·EKS와 GitOps로 안정적인 운영 기반을 만들고, LLM 에이전트 기반 서비스 개발에도 강점을 가지고 있습니다.
         </p>
